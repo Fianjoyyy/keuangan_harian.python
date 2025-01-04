@@ -1,0 +1,30 @@
+def keuangan_harian():
+    saldo_awal = int(input("Masukkan saldo awal Anda: "))
+    total_pengeluaran = 0
+
+    while True:
+        print("\nMenu Utama:")
+        print("1. Tambah Pengeluaran")
+        print("2. Tampilkan Total Pengeluaran")
+        print("3. Tampilkan Sisa Saldo")
+        print("4. Keluar")
+
+        pilihan = int(input("Pilih opsi (1-4): "))
+
+        if pilihan == 1:
+            kategori = input("Masukkan nama kategori pengeluaran: ")
+            jumlah = int(input("Masukkan jumlah pengeluaran: "))
+            total_pengeluaran += jumlah
+            saldo_awal -= jumlah
+            print("Pengeluaran berhasil ditambahkan!")
+        elif pilihan == 2:
+            print("Total pengeluaran Anda: Rp", total_pengeluaran)
+        elif pilihan == 3:
+            print("Sisa saldo Anda: Rp", saldo_awal)
+        elif pilihan == 4:
+            print("Terima kasih telah menggunakan Aplikasi Keuangan Harian!")
+            break
+        else:
+            print("Pilihan tidak valid. Silakan pilih 1-4.")
+
+keuangan_harian()
